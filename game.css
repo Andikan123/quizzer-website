@@ -1,0 +1,130 @@
+body{
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+}
+.cover{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+    /* border: 1px solid red; */
+    /* min-width: 800px; */
+}
+.top{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.score{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+}
+.question{
+    text-align: center;
+    width: 100%;
+    /* border: 1px solid red; */
+    
+}
+.question h1{
+    font-size: 3rem;
+}
+.score p{
+    font-size: 2rem;
+    color: red;
+}
+
+
+.choice-prefix{
+    padding: 2rem 2.5rem;
+    color: #fff;
+}
+.answer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-width: 60rem;
+    /* border: 1px solid red; */
+}
+.option{
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    margin-bottom:0.8rem ;
+    border-radius: 4px;
+    background: rgb(18, 93, 255);
+    font-size: 2rem;
+    color: #fff;
+    border: none;
+}
+.option:hover:not([disabled]){
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+.option:disabled{
+    cursor: no-drop;
+}
+.correct{
+    background: linear-gradient(32deg,rgba(11,223,36)0%, rgb(41,232,111) 100%);
+}
+.incorrect{
+    background: linear-gradient(32deg,rgba(230,29,29,1)0%, rgb(224,11,11,1) 100%);
+}
+
+
+/*heads up display*/
+#hud{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix{
+    text-align: center;
+    font-size: 2rem;
+}
+.hud-main-text{
+    text-align: center;
+}
+
+#progressBar{
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11,223,36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull{
+    height: 100%;
+    background: rgb(11,223,36);
+    width: 0%;
+
+}
+@media screen and (max-width:768px){
+    .choice-container{
+        min-width: 40rem;
+    }
+}
+#next{
+    width: 14rem;
+    padding: 20px;
+    font-size: 2rem;
+    background:  rgb(18, 93, 255);
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    margin: 2rem 0;
+
+}
